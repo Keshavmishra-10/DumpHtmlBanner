@@ -1,47 +1,47 @@
-
-<!-- This is a sample HTML banner, feel free to remove or edit if you feel you have the HTML / CSS development skills. We cover Instance Customization in dojo.litmos.com, feel free to explore the course library there for more info.  DISCLAIMER: Make sure you always back up your code externally before pressing save. -->
 <style>
+  /* Prevent overflow */
   .col-md-7.form-group,
   .l-theme-preview-card {
     overflow: hidden;
   }
 
-  .app__hero__video {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-  }
-
+  /* Banner Container */
   section.app__hero {
     overflow: hidden;
   }
 
   .app__hero {
-    min-height: 320px;
-    height: 30vh;
     position: relative;
-    z-index: -10;
-    text-transform: none !important;
-  }
+    width: 100%;
+    height: 30vh;
+    min-height: 320px;
+    overflow: hidden;
+}
 
-  .align-middle {
-    -ms-flex-align: center;
-    align-items: center !important;
-  }
+  /* Banner Image (same behavior as original video) */
+  .app__hero__image {
+    position: absolute;
+    inset: 0;
 
-  video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center right;
+}
+
+  /* General */
+  img {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: sans-serif;
     vertical-align: baseline;
+    display: block;
   }
 
   .columns.medium-12 {
@@ -55,47 +55,50 @@
     display: block !important;
   }
 
-  @media print,
-  screen and (min-width: 40em) {
+  /* Desktop */
+  @media print, screen and (min-width: 40em) {
     .medium-12 {
-      -ms-flex: 0 0 100%;
       flex: 0 0 100%;
       max-width: 100%;
       min-width: 0;
     }
   }
 
-  @media print,
-  screen and (max-width: 1200px) {
-    .app__hero__video {
+  /* Tablet */
+  @media print, screen and (max-width: 1200px) {
+
+    .app__hero {
+      min-height: 300px;
+      height: 35vh;
+    }
+
+    .app__hero__image {
       min-width: 0;
       min-height: 380px;
       height: 60vw;
     }
-
-    #htmlBanner video {
-      width: 150vw;
-    }
   }
 
-  @media print,
-  screen and (max-width: 672px) {
-    .app__hero__video {
-      min-width: 0;
-      min-height: 380px;
-      height: 30vw;
+  /* Mobile */
+  @media print, screen and (max-width: 672px) {
+
+    .app__hero {
+      min-height: 220px;
+      height: 28vh;
     }
 
-    #htmlBanner video {
-      width: 150vw;
+    .app__hero__image {
+      min-width: 0;
+      min-height: 220px;
+      height: 45vw;
     }
   }
 </style>
 
 <section class="app__hero">
-  <video playsinline loop="" autoplay="" muted="" class="app__hero__video" src="https://litcommon.litmos.com/img/branding/Litmos_Banner1080.mp4"></video>
-  <script>
-    document.getElementById("vid").play();
-  </script>
-  
+  <img
+    class="app__hero__image"
+    src="https://raw.githubusercontent.com/Keshavmishra-10/DumpHtmlBanner/main/newImage.png"
+    alt="Learning Banner"
+  />
 </section>

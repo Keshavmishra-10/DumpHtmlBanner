@@ -1,0 +1,58 @@
+<style>
+  .col-md-7.form-group,
+  .l-theme-preview-card {
+    overflow: hidden;
+  }
+
+  section.app__hero {
+    overflow: hidden;
+  }
+
+  .app__hero {
+    position: relative;
+    height: 30vh;
+    min-height: 320px;
+    width: 100%;
+    overflow: hidden;
+    text-transform: none !important;
+  }
+
+  .app__hero__image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+  }
+
+  div#htmlBanner {
+    overflow: hidden;
+    display: block !important;
+  }
+
+  @media (max-width: 1200px) {
+    .app__hero {
+      height: 28vh;
+      min-height: 280px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .app__hero {
+      height: 24vh;
+      min-height: 220px;
+    }
+  }
+</style>
+
+<section class="app__hero">
+  <img
+    class="app__hero__image"
+    src="https://raw.githubusercontent.com/Keshavmishra-10/DumpHtmlBanner/main/newImage.png"
+    alt="Learning Banner">
+</section>
